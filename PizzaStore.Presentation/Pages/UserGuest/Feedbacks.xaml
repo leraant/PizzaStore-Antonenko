@@ -1,0 +1,65 @@
+﻿<Page
+    x:Class="PizzaStore.Presentation.Pages.Feedbacks"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PizzaStore.Presentation.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="800" Width="1498">
+
+    <Grid Background="#FFE0CEB4">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="429*"/>
+            <ColumnDefinition Width="320*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock
+            Text="Feedbacks"
+            Margin="244,0,0,708" 
+            Foreground="#FF64594C"
+            FontFamily="Bahnschrift"
+            FontSize="50"
+            HorizontalAlignment="Left"
+            Width="285" 
+            Height="59"
+            VerticalAlignment="Bottom"
+            RenderTransformOrigin="0.287,2.689" FocusVisualPrimaryBrush="#FF2E72B5" FontWeight="Bold"/>
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Margin="40,104,0,181" Grid.ColumnSpan="2">
+            <ListView x:Name="feedbackListView" Height="513" RenderTransformOrigin="0.688,1.272" Width="1458">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Border CornerRadius="25" BorderThickness="10" Background="White" >
+                            <StackPanel Margin="10">
+                                <TextBlock Text="{Binding Name}" Foreground="#FFA01D0E"   FontSize="20" FontFamily="Bahnschrift"  Margin="0,0,0,0" FocusVisualPrimaryBrush="#FF850B0B"/>
+                                <TextBlock Text="{Binding Feedbacks}" Foreground="#FF125421" FontSize="24" FontFamily="Bahnschrift"  Margin="0,5,0,0"/>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollViewer>
+
+        <StackPanel Grid.ColumnSpan="2">
+            <TextBox 
+            x:Name="FeedbackTextbox"
+            CornerRadius="30"  
+            HorizontalAlignment="Left"
+            Margin="127,620,0,0" TextWrapping="Wrap"
+            Text="" 
+            Width="465" Height="130"
+            RenderTransformOrigin="0.5,0.5"
+            FontSize="30" FontFamily="Bahnschrift"
+            Foreground="Black"
+            BorderBrush="White" 
+            Background="White"/>
+            <Button  x:Name="SendButton" FontFamily="Bahnschrift" Margin="597,-180,0,0" FontSize="40" Background="#FF5B75FB" CornerRadius="30" Height="60" Width="60" Foreground="White" Click="SendButton_Click">
+                <Button.Content>
+                    <Image x:Name="SendButtonImage" Source="Assets/message.png" Height="28" Width="28" />
+                </Button.Content>
+            </Button>
+
+        </StackPanel>
+
+    </Grid>
+</Page>

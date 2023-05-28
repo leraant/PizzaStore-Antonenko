@@ -1,0 +1,245 @@
+﻿<Page
+    x:Class="PizzaStore.Presentation.Pages.AdminMainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PizzaStore.Presentation.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Extensions= "using:Microsoft.Toolkit.Uwp.UI.Extensions"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="800">
+    <Grid Name ="Bg" Background="#E0D6CC" Margin="0,0,0,4">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Margin="0,0,0,0" FocusVisualPrimaryBrush="#FF4F4A4A" Height="678" Width="302">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <RelativePanel
+                   x:Name="Menu_Pizzeria" Margin="0,-11,0,20" Grid.RowSpan="1">
+                <TextBlock x:Name="TitleTextBlock"
+                   Text="PIZZATA"
+                   FontSize="35"
+                   Height="45"
+                   Width="170"
+                   Foreground="#FF4F4A4A"
+                   FontFamily="Arial Black"
+                   FocusVisualPrimaryBrush="#FF4F4A4A" Margin="65,10,30,0"/>
+            </RelativePanel>
+
+            <Grid Grid.Row="1">
+                <RelativePanel Name="Home"
+                       Margin="0"
+                       VerticalAlignment="Center"
+                       Extensions:Mouse.Cursor="Hand"
+                       PointerEntered="Home_PointerEntered"
+                       PointerExited="Home_PointerExited"
+                       PointerPressed="Home_PointerPressed">
+
+                    <Image Source="Assets/home.png"
+                        Width="45"
+                        Margin="30,20,30,20"
+                        Name="Icon1"/>
+                    <TextBlock RelativePanel.RightOf="Icon1"
+                                    Text="Home"
+                                   Margin="0,30,0,30" 
+                                   Foreground="#FF116F16"
+                                   FontFamily="Bahnschrift"
+                                   FontSize="24"
+                                   FontWeight="Bold"/>
+                </RelativePanel>
+            </Grid>
+
+            <Grid Grid.Row="2">
+                <RelativePanel Name="Menu"
+                       Margin="0"
+                       VerticalAlignment="Center"
+                       Extensions:Mouse.Cursor="Hand"
+                       PointerEntered="Menu_PointerEntered"
+                       PointerExited="Menu_PointerExited"
+                       PointerPressed="Menu_PointerPressed">
+                    <Image Source="Assets/menu.png"
+                   Width="45"
+                   Margin="30,20,30,20"
+                               Name="Icon2"/>
+                    <TextBlock RelativePanel.RightOf="Icon2"
+                                    Text="Menu"
+                                   Margin="0,30,0,30" 
+                                   Foreground="#FF116F16"
+                                   FontFamily="Bahnschrift"
+                                   FontSize="24"
+                                   FontWeight="Bold"/>
+                </RelativePanel>
+            </Grid>
+
+            <Grid Grid.Row="3">
+                <RelativePanel Name="Sales"
+                       Margin="0"
+                       VerticalAlignment="Center"
+                       Extensions:Mouse.Cursor="Hand"
+                       PointerEntered="Sales_PointerEntered"
+                       PointerExited="Sales_PointerExited"
+                       PointerPressed="Sales_PointerPressed">
+                    <Image Source="Assets/sales.png"
+                   Width="45" Height="44" Margin="30,20,30,20"
+                               Name="Icon3"/>
+                    <TextBlock RelativePanel.RightOf="Icon3"
+                                    Text="Sales"
+                                   Margin="0,30,0,30" 
+                                   Foreground="#FF116F16"
+                                   FontFamily="Bahnschrift"
+                                   FontSize="24"
+                                   FontWeight="Bold"/>
+                </RelativePanel>
+            </Grid>
+
+            <Grid Grid.Row="4">
+                <RelativePanel Name="Favorite"
+                       Margin="0"
+                       VerticalAlignment="Center"
+                       Extensions:Mouse.Cursor="Hand"
+                       PointerEntered="Favorite_PointerEntered"
+                       PointerExited="Favorite_PointerExited"
+                       PointerPressed="Favorite_PointerPressed">
+                    <Image Source="Assets/feedback.png"
+                   Width="45" Height="44" Margin="30,20,30,20"
+                               Name="Icon4"/>
+                    <TextBlock RelativePanel.RightOf="Icon4"
+                                    Text="Feedbacks"
+                                   Margin="0,30,0,30" 
+                                   Foreground="#FF116F16"
+                                   FontFamily="Bahnschrift"
+                                   FontSize="24"
+                                   FontWeight="Bold"/>
+                </RelativePanel>
+            </Grid>
+
+            <Grid Grid.Row="5">
+                <RelativePanel Name="AboutUs"
+                       Margin="0"
+                       VerticalAlignment="Center"
+                       Extensions:Mouse.Cursor="Hand"
+                       PointerEntered="AboutUs_PointerEntered"
+                       PointerExited="AboutUs_PointerExited"
+                       PointerPressed="AboutUs_PointerPressed">
+                    <Image Source="Assets/aboutus.png"
+                   Width="45" Height="44" Margin="30,20,30,20"
+                                Name="Icon5"/>
+                    <TextBlock RelativePanel.RightOf="Icon5"
+                                    Text="About Us"
+                                   Margin="0,30,0,30" 
+                                   Foreground="#FF116F16"
+                                   FontFamily="Bahnschrift"
+                                   FontSize="24"
+                                   FontWeight="Bold"/>
+                </RelativePanel>
+            </Grid>
+
+            <Grid Grid.Row="6">
+                <RelativePanel Name="Orders"
+                       Margin="0"
+                       VerticalAlignment="Center"
+                       Extensions:Mouse.Cursor="Hand"
+                       PointerEntered="Orders_PointerEntered"
+                       PointerExited="Orders_PointerExited" 
+                       PointerPressed="Orders_PointerPressed">
+                    <Image Source="Assets/orders.png"
+                   Width="45" Height="44" Margin="30,20,30,20"
+                               Name="Icon6"/>
+                    <TextBlock RelativePanel.RightOf="Icon6"
+                                    Text="Orders"
+                                   Margin="0,30,0,30" 
+                                   Foreground="#FF116F16"
+                                   FontFamily="Bahnschrift"
+                                   FontSize="24"
+                                   FontWeight="Bold"/>
+                </RelativePanel>
+            </Grid>
+            <Grid Grid.Row="7">
+                <RelativePanel Name="Profile"
+                       Margin="0"
+                       VerticalAlignment="Center"
+                       Extensions:Mouse.Cursor="Hand"
+                       PointerEntered="Profile_PointerEntered"
+                       PointerExited="Profile_PointerExited"
+                       PointerPressed="Profile_PointerPressed">
+                    <Image Source="Assets/profile.png"
+                   Width="45" Height="44" Margin="30,20,30,20"
+                               Name="Icon7"/>
+                    <TextBlock RelativePanel.RightOf="Icon7"
+                                    Text="Profile"
+                                   Margin="0,30,0,30" 
+                                   Foreground="#FF116F16"
+                                   FontFamily="Bahnschrift"
+                                   FontSize="24"
+                                   FontWeight="Bold"/>
+                </RelativePanel>
+            </Grid>
+
+        </Grid>
+        <Grid Grid.Column="1"
+                      Background="#FFFAA940"
+                      Name="PageContent"
+             >
+            <Image Source="Assets/background.jpg"
+                        Margin="96,80,0,0"
+                        Name="Background" Height="587" VerticalAlignment="Top" HorizontalAlignment="Left" Width="742"/>
+
+            <Button
+                Name="ButtonFeedback"
+                Content=""
+                Margin="680,0,0,80"
+                VerticalAlignment="Bottom"
+                CornerRadius="60"
+                Background="#FF216AB7" Width="90" Height="90" Click="ButtonFeedback_Click" />
+            <Image Source="Assets/chat.png"
+                  Name="Chat"
+                   Margin="700,0,0,100" Height="50" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="50" RenderTransformOrigin="0.187,0.066"/>
+
+            <Button
+                Name="ButtonLocation"
+                Content=""
+                Margin="177,0,0,80"
+                VerticalAlignment="Bottom"
+                CornerRadius="40"
+                RenderTransformOrigin="0.35,1.323"
+                Background="#FFE0D6CC" Height="78" Width="335"
+                Click="ButtonLocation_Click"
+                 />
+            <Image Source="Assets/location.png"
+                   Margin="200,0,0,95"
+                               Name="Location" RenderTransformOrigin="-8.762,6.42" UseLayoutRounding="False" d:LayoutRounding="Auto" Height="50" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="50">
+                <Image.RenderTransform>
+                    <CompositeTransform Rotation="0.027"/>
+                </Image.RenderTransform>
+            </Image>
+            <TextBlock
+                                    Text="Choose Location"
+                                   Margin="260,0,0,95" 
+                                   Foreground="#FF216AB7"
+                                   FontFamily="Bahnschrift"
+                                   FontSize="28"
+                                   FontWeight="Bold" HorizontalAlignment="Left" Width="215" Height="39" VerticalAlignment="Bottom"/>
+            <Frame Name="MyFrame" Canvas.ZIndex="10" >
+
+
+            </Frame>
+
+
+        </Grid>
+
+    </Grid>
+
+</Page>

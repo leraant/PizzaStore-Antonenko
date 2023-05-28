@@ -1,0 +1,56 @@
+﻿<Page
+    x:Class="PizzaStore.Presentation.Pages.AdminProfile"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PizzaStore.Presentation.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="800">
+
+    <Grid Background="#FFE0CEB4">
+
+        <TextBlock
+            Text="Profile"
+            Margin="265,0,0,687" 
+            Foreground="#FF836464"
+            FontFamily="Bahnschrift"
+            FontSize="60"
+            FontWeight="Bold"
+            HorizontalAlignment="Left"
+            Width="193" 
+            Height="71"
+            VerticalAlignment="Bottom"
+            FocusVisualPrimaryBrush="#FFDD3F21" RenderTransformOrigin="0.287,2.689"/>
+
+        <Ellipse HorizontalAlignment="Left" Height="192" Margin="63,137,0,0" VerticalAlignment="Top" Width="197" Fill="#FFCEBB9F" FocusVisualPrimaryBrush="#FFBB4B0C"/>
+        <Image Source="Assets/profileuser.png"
+                        Margin="118,0,0,523"
+                        Name="Background" Height="113" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="99" RenderTransformOrigin="0.73,0.605"/>
+        <Button
+                Name="ButtonLogIn"
+                Content=""
+                Margin="121,0,0,344"
+                VerticalAlignment="Bottom"
+                CornerRadius="40"
+                RenderTransformOrigin="0.35,1.323"
+                Background="#FF9BC832" Height="78" Width="335" Click="ButtonLogIn_Click" 
+        />
+        <TextBlock HorizontalAlignment="Left" Margin="300,170,0,0" TextWrapping="Wrap" Text="Admin" VerticalAlignment="Top" FontFamily="Bahnschrift" FontSize="36" FontWeight="Bold" Foreground="#FF64594C" RenderTransformOrigin="0.506,0.212"/>
+        <TextBox Name="NameTextBox" HorizontalAlignment="Left" Margin="404,166,0,0" Text="" VerticalAlignment="Top" Width="312" Foreground="#FF64594C" FontFamily="Bahnschrift" FontSize="36" TextWrapping="Wrap" BorderBrush="#FFE0CEB4" Background="#FFE0CEB4" Height="60"/>
+        <TextBlock HorizontalAlignment="Left" Margin="300,250,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" FontFamily="Bahnschrift" FontSize="36" FontWeight="Bold" Foreground="#FF64594C" RenderTransformOrigin="0.523,0.693"/>
+        <TextBox Name="EmailTextBox"  HorizontalAlignment="Left" Margin="413,236,0,0" Text="adminpizzata@gmail.com" VerticalAlignment="Top" Width="341" Foreground="#FF64594C" FontFamily="Bahnschrift" FontSize="36" TextWrapping="Wrap" BorderBrush="#FFE0CEB4" Background="#FFE0CEB4" Height="57"/>
+        <TextBlock HorizontalAlignment="Left" Margin="237,396,0,0" TextWrapping="Wrap" Text="Log in" VerticalAlignment="Top" FontFamily="Bahnschrift" FontSize="36" FontWeight="Bold" Foreground="#FF64594C" RenderTransformOrigin="0.523,0.693"/>
+        <TextBlock HorizontalAlignment="Left" Margin="221,514,0,0" TextWrapping="Wrap" Text="Register" VerticalAlignment="Top" FontFamily="Bahnschrift" FontSize="36" FontWeight="Bold" Foreground="#FFE0CEB4" RenderTransformOrigin="0.523,0.693"/>
+        <Button
+            x:Name="ButtonExit"
+            Content=""
+            Margin="641,0,0,703"
+            VerticalAlignment="Bottom"
+            CornerRadius="60"
+            Background="#FF216AB7" Width="60" Height="60" Click="ButtonExit_Click"/>
+        <Image Source="Assets/exit.png"
+                  Name="Exit"
+                  Margin="656,0,0,716" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="30" RenderTransformOrigin="0.187,0.066"/>
+    </Grid>
+</Page>

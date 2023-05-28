@@ -1,0 +1,74 @@
+﻿<Page
+    x:Class="PizzaStore.Presentation.Pages.AdminMenu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PizzaStore.Presentation.Pages"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="800" Width="1500">
+
+    <Page.Resources>
+        <DataTemplate x:Key="MenuItemTemplate">
+            <Grid>
+                <Rectangle  Fill="#FFABC887" Width="270" Height="350" HorizontalAlignment="Left" VerticalAlignment="Top" RadiusX="51.538" RadiusY="51.538" Margin="0,0,0,0"/>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="230"/>
+                        <RowDefinition Height="35"/>
+                        <RowDefinition Height="37"/>
+                        <RowDefinition Height="90"/>
+                    </Grid.RowDefinitions>
+
+
+                    <Image Grid.Row="0" Source="{Binding Img}" Width="200" Height="200" HorizontalAlignment="Center" VerticalAlignment="Top" Stretch="Uniform" Margin="0,15,0,0">
+
+                    </Image>
+                    <Button Content="-" FontFamily="Bahnschrift" FontSize="25" Background="#FFFD860E" CornerRadius="20" Margin="210,10,20,0" VerticalAlignment="Top" Height="40" Width="40" Foreground="White" Grid.Row="0" Click="DeleteButton_Click"/>
+                    <TextBlock Grid.Row="1" Text="{Binding NameOfproduct}" Foreground="#FF125421" FontFamily="Bahnschrift" FontSize="30" FontWeight="Bold" Margin="35,0,0,0"/>
+
+                    <StackPanel Grid.Row="2" Orientation="Horizontal">
+                        <TextBlock Text="{Binding Price}"  Foreground="#FFA01D0E" FontFamily="Bahnschrift" FontSize="20" FontWeight="Bold" Margin="35,0,0,0"/>
+                        <TextBlock Text=" €"  Foreground="#FFA01D0E" FontFamily="Bahnschrift" FontSize="19" FontWeight="Bold" Margin="0,0,0,0"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="3" Orientation="Horizontal">
+                        <Button Content="View more" FontFamily="Bahnschrift" FontSize="17" Background="#FFA01D0E" CornerRadius="15" Margin="30,0,20,0" VerticalAlignment="Top" Height="37" Width="113" Foreground="White" Grid.Row="1" Click="ViewMoreButton_Click"/>
+                        <Button Content="Edit" FontFamily="Bahnschrift" FontSize="17"  Background="#FF2A23A4" CornerRadius="15"  VerticalAlignment="Top" Width="79" Height="37" Foreground="#FFFFFEFE" Grid.Row="1" Click="EditButton_Click"/>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+
+
+    <Grid Background="#FF6CA426">
+        
+        <ListView x:Name="MenuListView" ItemTemplate="{StaticResource MenuItemTemplate}" Margin="56,0,2,10">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapGrid Orientation="Horizontal" MaximumRowsOrColumns="2" />
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="Margin" Value="20" />
+                    <Setter Property="BorderThickness" Value="1" />
+                    <Setter Property="HorizontalAlignment" Value="Center" />
+                    <Setter Property="VerticalAlignment" Value="Center" />
+                    <Setter Property="Height" Value="370"/>
+                    <Setter Property="Width" Value="300"/>
+                    <Setter Property="CornerRadius" Value="50"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    <Setter Property="VerticalContentAlignment" Value="Center"/>
+                </Style>
+
+            </ListView.ItemContainerStyle>
+
+        </ListView>
+
+        <Button  x:Name="MenuPizzas" Content="Pizzas" FontFamily="Bahnschrift" FontSize="23" Background="#FFD9D2B6" CornerRadius="25" Margin="760,120,0,0" VerticalAlignment="Top" Height="70" Width="130" Foreground="#FF735464" RenderTransformOrigin="4.398,2.212" Click="MenuPizzasButton_Click"/>
+        <Button  x:Name="MenuDrinks" Content="Drinks" FontFamily="Bahnschrift" FontSize="23"  Background="#FFD9D2B6" CornerRadius="25"  VerticalAlignment="Top" Width="130" Height="70" Foreground="#FF765A67" Margin="760,295,0,0" RenderTransformOrigin="0.248,0.478" Click="MenuDrinksButton_Click"/>
+        <Button  x:Name="MenuDesserts" Content="Desserts" FontFamily="Bahnschrift" FontSize="23"  Background="#FFD9D2B6" CornerRadius="25"  VerticalAlignment="Top" Width="130" Height="70" Foreground="#FF735464" Margin="760,470,0,0" Click="MenuDessertsButton_Click"/>
+        
+        <Button Name="ButtonAdd" Content ="+" CornerRadius="50"  Margin="750,644,0,0" VerticalAlignment="Top" Height="80" Width="80" Foreground="White" FontFamily="Bahnschrift" FontSize="60" Background="#FF3145CC" Click="ButtonAdd_Click_1"></Button>
+    </Grid>
+</Page>

@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="PizzaStore.Presentation.Pages.AboutUs"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PizzaStore.Presentation.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="800">
+
+    <Grid Background="#FF005538">
+        <Image Source="Assets/AboutUsBackground.png"
+                        Margin="119,-35,0,0"
+                        Name="Background" Height="510" VerticalAlignment="Top" HorizontalAlignment="Left" Width="994"/>
+        <Rectangle HorizontalAlignment="Left" Height="303" Margin="106,447,0,0" VerticalAlignment="Top" Width="360" Fill="#FFD7CEC4" RadiusX="44.75" RadiusY="44.75"/>
+        <Rectangle HorizontalAlignment="Left" Height="161" Margin="504,465,0,0" VerticalAlignment="Top" Width="268" Fill="#FFD7CEC4" RadiusX="36.35" RadiusY="36.35"/>
+        <TextBlock HorizontalAlignment="Left" Margin="142,472,0,0" TextWrapping="Wrap" Text="Welcome to Pizzata! We serve delicious pizzas made with love and the freshest ingredients, delivered right to your doorstep. Our skilled chefs handcraft each pizza to perfection, ensuring a burst of flavor in every bite. Place your order easily from our menu and let us take care of the rest.Join our Pizzata family today and experience the finest, tantalizing pizzas that will satisfy your cravings." VerticalAlignment="Top" Height="267" Width="299" FontFamily="Bahnschrift" FontSize="18" />
+        <TextBlock HorizontalAlignment="Left" Margin="573,491,0,0" TextWrapping="Wrap" Text="Contact us" VerticalAlignment="Top" FontFamily="Bahnschrift" Foreground="#FF990B0B" FontSize="27" Height="36" Width="131"/>
+        <TextBlock HorizontalAlignment="Left" Margin="530,536,0,0" TextWrapping="Wrap" Text="adminpizzata@gmail.com " VerticalAlignment="Top" FontFamily="Bahnschrift" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="528,567,0,0" TextWrapping="Wrap" Text="+380956406356" VerticalAlignment="Top" FontFamily="Bahnschrift" FontSize="20"/>
+
+    </Grid>
+</Page>

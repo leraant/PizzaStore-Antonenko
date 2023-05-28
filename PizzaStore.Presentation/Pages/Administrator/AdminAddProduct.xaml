@@ -1,0 +1,100 @@
+﻿<Page
+    x:Class="PizzaStore.Presentation.Pages.AdminAddProduct"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PizzaStore.Presentation.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="800" Loaded="Page_Loaded" Unloaded="Page_Unloaded">
+    <Grid Background="#FF6CA426">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="91*"/>
+            <RowDefinition Height="69*"/>
+        </Grid.RowDefinitions>
+        <TextBlock
+            Text="Add product"
+            Margin="263,0,0,338" 
+            Foreground="#FF862519"
+            FontFamily="Bahnschrift"
+            FontSize="60"
+            FontWeight="Bold"
+            HorizontalAlignment="Left"
+            Width="349" 
+            Height="71"
+            VerticalAlignment="Bottom"
+            FocusVisualPrimaryBrush="#FFDD3F21" RenderTransformOrigin="0.287,2.689">
+
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="131,361,0,0" TextWrapping="Wrap" Text="Ingredient description" VerticalAlignment="Top" FontSize="30" FontWeight="Bold" FontFamily="Bahnschrift" Foreground="#FF125421"/>
+        <TextBox 
+                 Name="IngridientTextbox"
+                 CornerRadius="30"  
+                 HorizontalAlignment="Left"
+                 Margin="456,336,0,0" TextWrapping="Wrap"
+                 Text="" VerticalAlignment="Top" 
+                 Width="327" Height="169"
+                 RenderTransformOrigin="0.556,0.517"
+                 FontSize="30" FontFamily="Bahnschrift"
+                 Foreground="#FF7E7575"
+                 BorderBrush="#FF6CA426" 
+                 Background="#FFD1E8C7" Grid.RowSpan="2"/>
+        <Button
+            x:Name="ButtonAddProduct"
+            Content="Add"
+            Margin="480,0,0,83"
+            VerticalAlignment="Bottom"
+            CornerRadius="40"
+            RenderTransformOrigin="0.35,1.323"
+            Background="#FF2A23A4"  Height="78" Width="275"  FocusVisualPrimaryBrush="#FFB2E973" Click="ButtonAddProduct_Click" Foreground="#FFF1F6E8" FontSize="30" FontWeight="Bold" FontFamily="Bahnschrift" Grid.Row="1"  
+        />
+        <TextBlock HorizontalAlignment="Left" Margin="310,253,0,0" TextWrapping="Wrap" Text="Price" VerticalAlignment="Top" FontSize="30" FontWeight="Bold" FontFamily="Bahnschrift" Foreground="#FF125421"/>
+        <TextBlock HorizontalAlignment="Left" Margin="201,175,0,0" TextWrapping="Wrap" Text="Name of product" VerticalAlignment="Top" FontSize="30" FontWeight="Bold" FontFamily="Bahnschrift" Foreground="#FF164B22"/>
+        <TextBox 
+            Name="PriceTextbox"
+            CornerRadius="30"  
+            HorizontalAlignment="Left"
+            Margin="463,247,0,0" TextWrapping="Wrap"
+            Text="" VerticalAlignment="Top" 
+            Width="299" Height="58"
+            RenderTransformOrigin="0.5,0.5"
+            FontSize="30" FontFamily="Bahnschrift"
+            Foreground="#FF7E7575"
+            BorderBrush="#FF6CA426" 
+            Background="#FFD1E8C7"/>
+        <TextBox 
+            Name="NameTextbox"
+            CornerRadius="30"  
+            HorizontalAlignment="Left"
+            Margin="459,164,0,0" TextWrapping="Wrap"
+            Text="" VerticalAlignment="Top" 
+            Width="299" Height="58"
+            RenderTransformOrigin="0.5,0.5"
+            FontSize="30" FontFamily="Bahnschrift"
+            Foreground="#FF7E7575"
+            BorderBrush="#FF6CA426" 
+            Background="#FFD1E8C7"/>
+        <TextBlock HorizontalAlignment="Left" Margin="220,83,0,0" TextWrapping="Wrap" Text="Product type" VerticalAlignment="Top" FontSize="30" FontWeight="Bold" FontFamily="Bahnschrift" Foreground="#FF164B22" Grid.Row="1"/>
+        <ComboBox Name="ComboBoxTypeOfProduct" CornerRadius="30" Background="#FFD1E8C7" Margin="460,67,0,0" Width="301" Height="64"  FontSize="30" FontFamily="Bahnschrift" Foreground="#FF7E7575" BorderBrush="#FF6CA426" Grid.Row="1">
+            <ComboBoxItem>Pizza</ComboBoxItem>
+            <ComboBoxItem>Desserts</ComboBoxItem>
+            <ComboBoxItem>Drinks</ComboBoxItem>
+        </ComboBox>
+        <Image x:Name="productImage" Grid.RowSpan="2"/>
+
+
+        <Button
+            x:Name="ButtonAddPhoto"
+            Content="Add Photo"
+            Margin="136,0,0,84"
+            VerticalAlignment="Bottom"
+            CornerRadius="40"
+            RenderTransformOrigin="0.35,1.323"
+            Background="#FFA01D0E" Height="76" Width="275"  FocusVisualPrimaryBrush="#FFB2E973"  Foreground="#FFF1F6E8" FontFamily="Bahnschrift" FontSize="30" FontWeight="Bold" Click="ButtonAddPhoto_Click_1" Grid.Row="1"  
+        />
+        <Image x:Name="ProductImage" Source="{Binding Img}" Width="270" Height="270" Margin="860,106,370,79"/>
+    </Grid>
+
+
+
+</Page>

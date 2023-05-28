@@ -1,0 +1,173 @@
+﻿<Page
+    x:Class="PizzaStore.Presentation.Pages.Checkout"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PizzaStore.Presentation.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="800" Width="1499">
+    <Page.Resources>
+        <Style x:Key="RadioButtonStyle1" TargetType="RadioButton">
+            <Setter Property="Background" Value="{ThemeResource RadioButtonBackground}"/>
+            <Setter Property="Foreground" Value="{ThemeResource RadioButtonForeground}"/>
+            <Setter Property="BorderBrush" Value="{ThemeResource RadioButtonBorderBrush}"/>
+            <Setter Property="Padding" Value="8,6,0,0"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="FontFamily" Value="{ThemeResource ContentControlThemeFontFamily}"/>
+            <Setter Property="FontSize" Value="{ThemeResource ControlContentThemeFontSize}"/>
+            <Setter Property="MinWidth" Value="120"/>
+            <Setter Property="UseSystemFocusVisuals" Value="True"/>
+            <Setter Property="FocusVisualMargin" Value="-7,-3,-7,-3"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="RadioButton">
+                        <Grid x:Name="RootGrid" Background="{TemplateBinding Background}" CornerRadius="25"  BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}">
+
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="PointerOver">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid" Storyboard.TargetProperty="Background">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource RadioButtonBackgroundPointerOver}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid" Storyboard.TargetProperty="BorderBrush">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource RadioButtonBorderBrushPointerOver}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid" Storyboard.TargetProperty="Background">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource RadioButtonBackgroundPressed}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid" Storyboard.TargetProperty="BorderBrush">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource RadioButtonBorderBrushPressed}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Disabled">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid" Storyboard.TargetProperty="Background">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource RadioButtonBackgroundDisabled}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid" Storyboard.TargetProperty="BorderBrush">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource RadioButtonBorderBrushDisabled}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="CheckStates">
+                                    <VisualState x:Name="Checked">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="myGrid" Storyboard.TargetProperty="Background">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="#FF7E4DEA"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Unchecked"/>
+                                    <VisualState x:Name="Indeterminate"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Grid x:Name="myGrid" Height="60" VerticalAlignment="Center">
+                                <ContentPresenter x:Name="ContentPresenter" AutomationProperties.AccessibilityView="Raw" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentTransitions="{TemplateBinding ContentTransitions}" Grid.Column="1" Foreground="{TemplateBinding Foreground}" HorizontalAlignment="Center" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" RenderTransformOrigin="0.516,0.876" Height="30" Width="181"/>
+                            </Grid>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+    <Grid Background="#FFD0DBF7">
+        <TextBlock
+            Text="Checkout"
+            Margin="254,0,0,695" 
+            Foreground="#FF7E4DEA"
+            FontFamily="Bahnschrift"
+            FontSize="60"
+            HorizontalAlignment="Left"
+            Width="265" 
+            Height="63"
+            VerticalAlignment="Bottom"
+            FocusVisualPrimaryBrush="#FFE26E59" RenderTransformOrigin="0.287,2.689" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="140,487,0,0" TextWrapping="Wrap" Text="Street" VerticalAlignment="Top" FontSize="23" FontWeight="Bold" FontFamily="Bahnschrift" Foreground="#FF927B7B" Height="30" Width="74"/>
+        <TextBox 
+            x:Name="StreetTextbox"
+            CornerRadius="30"  
+            HorizontalAlignment="Left"
+            Margin="127,515,0,0" TextWrapping="Wrap"
+            Text="" VerticalAlignment="Top" 
+            Width="293" Height="60"
+            RenderTransformOrigin="0.556,0.517"
+            FontSize="30" FontFamily="Bahnschrift"
+            Foreground="#FF7E7575"
+            BorderBrush="#FFBBB1BF" 
+            Background="#FFF7F8F3"/>
+        <TextBlock Name="CardholderName" HorizontalAlignment="Left" Margin="135,354,0,0" TextWrapping="Wrap" Text="Cardholder name" VerticalAlignment="Top" FontSize="23" FontWeight="Bold" FontFamily="Bahnschrift" Foreground="#FF927B7B" Height="29" Width="245"/>
+        <TextBlock Name="CardNumber" HorizontalAlignment="Left" Margin="137,226,0,0" TextWrapping="Wrap" Text="Card number" VerticalAlignment="Top" FontSize="23" FontWeight="Bold" FontFamily="Bahnschrift" Foreground="#FF927B7B" Height="29" Width="160"/>
+        <TextBox 
+            x:Name="CardholderNameTextbox"
+            CornerRadius="30"  
+            HorizontalAlignment="Left"
+            Margin="127,386,0,0" TextWrapping="Wrap"
+            Text="" VerticalAlignment="Top" 
+            Width="293" Height="60"
+            RenderTransformOrigin="0.5,0.5"
+            FontSize="30" FontFamily="Bahnschrift"
+            Foreground="#FF3D3D3D"
+            BorderBrush="#FFBBB1BF" 
+            Background="#FFF7F8F3"/>
+        <TextBox 
+            x:Name="CardNumberTextbox"
+            CornerRadius="30"  
+            HorizontalAlignment="Left"
+            Margin="129,253,0,0" TextWrapping="Wrap"
+            Text="" VerticalAlignment="Top" 
+            Width="293" Height="60"
+            RenderTransformOrigin="0.5,0.5"
+            FontSize="35" FontFamily="Bahnschrift"
+            Foreground="#FF6F6161"
+            BorderBrush="#FFBBB1BF" 
+            Background="#FFF7F8F3"
+           />
+        <TextBlock HorizontalAlignment="Left" Margin="494,484,0,0" TextWrapping="Wrap" Text="Housenumber" VerticalAlignment="Top" FontSize="23" FontWeight="Bold" FontFamily="Bahnschrift" Foreground="#FF927B7B" Height="33" Width="153"/>
+        <Image x:Name="productImage" Margin="-6,-3,5,3"/>
+        <TextBlock Name="CVVCVC" HorizontalAlignment="Left" Margin="502,226,0,0" TextWrapping="Wrap" Text="CVV/CVC" VerticalAlignment="Top" FontSize="23" FontWeight="Bold" FontFamily="Bahnschrift" Foreground="#FF927B7B" Height="29" Width="105"/>
+        <TextBox 
+            x:Name="CVVCVCTextbox"
+            CornerRadius="30"  
+            HorizontalAlignment="Left"
+            Margin="494,252,0,0" TextWrapping="Wrap"
+            Text="" VerticalAlignment="Top" 
+            Width="147" Height="60"
+            RenderTransformOrigin="0.556,0.517"
+            FontSize="30" FontFamily="Bahnschrift"
+            Foreground="#FF7E7575"
+            BorderBrush="#FFBBB1BF" 
+            Background="#FFF7F8F3"/>
+        <TextBox 
+            x:Name="HousenumberTextbox"
+            CornerRadius="30"  
+            HorizontalAlignment="Left"
+            Margin="494,515,0,0" TextWrapping="Wrap"
+            Text="" VerticalAlignment="Top" 
+            Width="147" Height="60"
+            RenderTransformOrigin="0.556,0.517"
+            FontSize="30" FontFamily="Bahnschrift"
+            Foreground="#FF6F6161"
+            BorderBrush="#FFBBB1BF" 
+            Background="#FFF7F8F3"/>
+        <Button x:Name="PayButton" Content="Pay for the order" FontFamily="Bahnschrift" FontSize="26" Background="#FF8D67EC" CornerRadius="30" Margin="251,626,0,0" VerticalAlignment="Top" Height="68" Width="270" Foreground="White" FontWeight="Bold" Click="PayButton_Click"/>
+
+        <RadioButton x:Name="CashOnDeliveryRadioButton" GroupName="1" Style="{StaticResource RadioButtonStyle1}" Background="#FFFB7D0F" Margin="402,142,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift" FontSize="24" Height="56" Width="220" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" Foreground="#FFF7F8F3" FontWeight="Bold" Checked="CashOnDeliveryRadioButton_Checked">Cash on delivery</RadioButton>
+        <RadioButton x:Name="CreditCardRadioButton" GroupName="1" Style="{StaticResource RadioButtonStyle1}"  Content="    Credit card" Background="#FFFB7D0F" Margin="161,143,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift" FontSize="24" Width="179" Height="56" Foreground="#FFF7F8F3" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" FontWeight="Bold" Checked="CreditCardRadioButton_Checked"/>
+
+    </Grid>
+</Page>

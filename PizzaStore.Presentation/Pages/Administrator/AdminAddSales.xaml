@@ -1,0 +1,77 @@
+﻿<Page
+    x:Class="PizzaStore.Presentation.Pages.AdminAddSales"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PizzaStore.Presentation.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="800">
+
+    <Grid Background="#FFFAA940">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="91*"/>
+            <RowDefinition Height="69*"/>
+        </Grid.RowDefinitions>
+        <TextBlock
+            Text="Add sale for product"
+            Margin="105,30,0,340" 
+            Foreground="#FF365DC6"
+            FontFamily="Bahnschrift"
+            FontSize="60"
+            FontWeight="Bold"
+            HorizontalAlignment="Left"
+            Width="546" 
+            Height="71"
+            VerticalAlignment="Bottom"
+            FocusVisualPrimaryBrush="#FFDD3F21" RenderTransformOrigin="0.287,2.689">
+
+        </TextBlock>
+        <Button
+            x:Name="ButtonEditConfirm"
+            Content="Edit Confirm"
+            Margin="270,0,0,45"
+            VerticalAlignment="Bottom"
+            CornerRadius="40"
+            RenderTransformOrigin="0.35,1.323"
+            Background="#FF0F5FD5"  Height="78" Width="275"  FocusVisualPrimaryBrush="#FFB2E973" Click="ButtonEditConfirm_Click" Foreground="#FFF1F6E8" FontSize="30" FontWeight="Bold" FontFamily="Bahnschrift" Grid.Row="1"  
+        />
+        <TextBlock HorizontalAlignment="Left" Margin="281,48,0,0" TextWrapping="Wrap" Text="Price" VerticalAlignment="Top" FontSize="30" FontWeight="Bold" FontFamily="Bahnschrift" Foreground="#FF0A7823" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="195,427,0,0" TextWrapping="Wrap" Text="Name of product" VerticalAlignment="Top" FontSize="30" FontWeight="Bold" FontFamily="Bahnschrift" Foreground="#FF0A7823" Grid.RowSpan="2"/>
+        <TextBlock
+            Name="PriceTextbox" 
+            HorizontalAlignment="Left"
+            Margin="452,51,0,0"
+            Text="" VerticalAlignment="Top" 
+            Width="299" Height="58"
+            RenderTransformOrigin="0.5,0.5"
+            FontSize="30" FontFamily="Bahnschrift"
+            Foreground="Black" Grid.Row="1" TextWrapping="Wrap"/>
+        <TextBlock 
+            Name="NameTextbox"
+            HorizontalAlignment="Left"
+            Margin="449,427,0,0" TextWrapping="Wrap"
+            Text="" VerticalAlignment="Top" 
+            Width="299" Height="58"
+            RenderTransformOrigin="0.5,0.5"
+            FontSize="30" FontFamily="Bahnschrift"
+            Foreground="Black" Grid.RowSpan="2"/>
+        <Rectangle  Fill="#FFFAE5D0" Width="270" Height="270" HorizontalAlignment="Left" VerticalAlignment="Top" RadiusX="51.538" RadiusY="51.538" Margin="243,128,0,0" FocusVisualPrimaryBrush="#66000000"/>
+        <Image x:Name="ProductImage" Source="{Binding Img}" Width="260" Height="260" Margin="250,0,0,67" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+        <TextBlock HorizontalAlignment="Left" Margin="701,52,0,0" TextWrapping="Wrap" Text="Id:" VerticalAlignment="Top" FontSize="48" FontWeight="Bold" FontFamily="Bahnschrift" FocusVisualPrimaryBrush="#FF3F3636" Foreground="Black" />
+        <TextBox x:Name="ProductId" HorizontalAlignment="Left" Margin="763,42,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Background="#FFFAA940" BorderBrush="#FFFAA940" FontSize="48" FontWeight="Bold" FontFamily="Bahnschrift" Foreground="Black" FocusVisualPrimaryBrush="#FF3F3636"/>
+        <TextBox 
+            x:Name="PercentDiscountTextbox"
+            CornerRadius="30"  
+            HorizontalAlignment="Left"
+            Margin="449,116,0,0" TextWrapping="Wrap"
+            Text="" VerticalAlignment="Top" 
+            Width="299" Height="58"
+            RenderTransformOrigin="0.5,0.5"
+            FontSize="30" FontFamily="Bahnschrift"
+            Foreground="Black"
+            BorderBrush="#FF6CA426" 
+            Background="#FFD1E8C7" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="157,127,0,0" TextWrapping="Wrap" Text="Percent of discount" VerticalAlignment="Top" FontSize="30" FontWeight="Bold" FontFamily="Bahnschrift" Foreground="#FF0A7823" Grid.Row="1"/>
+    </Grid>
+</Page>
